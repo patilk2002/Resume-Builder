@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="no-js" lang="">
 <head>
     <meta charset="UTF-8">
@@ -77,7 +77,7 @@
     </div>
 
     <!-- the form start from here -->
-                        <form action="rpdf.php" method="POST" name="reg" >
+                        <form>
     <!-- Star Header Area -->
     <header id="header">
         <div class="container">
@@ -449,7 +449,7 @@
     <textarea rows="5" cols="40"  placeholder=" Describe your address here..."></textarea><br /><br />
                 </div>
             </div>
-             <button type="submit" class="submit btn main_bg_btn" style="padding:5px 30px ;float:left; margin-top:30px ;">Submit</button>
+             <button type="submit" class="submit btn main_bg_btn" style="padding:5px 30px ;float:left; margin-top:30px ;" onclick="RESUME(this.form)"> Submit </button>
              
              <button type="reset" class="submit btn main_bg_btn" style="padding:5px 30px ;float:left; margin-top:30px;margin-left: 30px;">reset</button>
             
@@ -722,6 +722,31 @@
     </footer>
     <!-- End Footer Area -->
 
+
+
+    <script>
+
+    function RESUME(form){
+
+    const date = new Date();
+
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; 
+    var yyyy = today.getFullYear();
+
+    // document.write("<div style='border:2px solid black'><div style='margin-left:20px'><div style='margin-right:20px'><div style='Color:#2196f3;text-align:center;font-size:25px;margin-top:5px;'>RESUME</div><hr><div style='line-height:25px'><b>"+form.fn.value+" "+form.ln.value+  "<br>Address : </b>"+form.addr.value+"<br><b>E-mail Id: </b>"+form.email.value+"<br><b>Contact no : </b>"+form.cn.value+"<br></div><hr><div style='background-color:#f3f2ee'>Career Objective :</div><div style='line-height:25px'><p>Seeking to work as a key player in a challenging and creative environment in an esteemed organization where I can utilize my abilities and have the opportunity for professional growth, which in turn leads to the growth of the organization.</p></div><div style='background-color:#f3f2ee'> personal Information :</div><br>Name: "+form.fn.value+" "+form.mn.value+" "+form.ln.value+"<br><br>");
+    document.write("<div style='border:2px solid black;'><div style='margin-left:20px'><div style='margin-right:20px'><div style='Color:#2196f3;text-align:center;font-size:25px;margin-top:5px;'>RESUME</div><hr><div style='line-height:25px'><b>"+form.fn.value+" "+form.ln.value+  "<br>Address : </b>"+form.addr.value+"<br><b>E-mail Id: </b>"+form.email.value+"<br><b>Contact no : </b>"+form.cn.value+"<br></div><hr><div style='background-color:#f3f2ee'>Career Objective :</div><div style='line-height:25px'><p>Seeking to work as a key player in a challenging and creative environment in an esteemed organization where I can utilize my abilities and have the opportunity for professional growth, which in turn leads to the growth of the organization.</p></div><div style='background-color:#f3f2ee'> personal Information :</div><br>Name: "+form.fn.value+" "+form.mn.value+" "+form.ln.value+"<br><br>Date Of Birth : "+form.dob.value+"<br><br>Nationality: "+form.nat.value+"<br><br>Maritial status : "+form.ms.value+"<br><br>Gender : "+form.gen.value+"<br><br>Languages Known :"+form.lang.value+"<br><br>Hobbies & Interest : "+form.hobbi.value+"<br><br><div style='background-color:#f3f2ee'> Educational Qualification :</div><div style='line-height:25px'><ul><li>Complated "+form.edua1.value+" from "+form.edua2.value+" with "+form.edua3.value+" %.</li><li>Complated "+form.edub1.value+" from "+form.edub2.value+" with "+form.edub3.value+" %.</li><li>Complated "+form.educ1.value+" from "+form.educ2.value+" with "+form.educ1.value+"</li></ul></div><div style='background-color:#f3f2ee'> Work Experience :</div><div style='line-height:25px'><ul><li>worked in " + form.wea1.value +" as "+ form.wea2.value +" for "+form.wea3.value+" Years.</li> <li>worked in " + form.wea1.value +" as "+ form.wea2.value +" for "+form.wea3.value+" Years.</li> <li>worked in " + form.wea1.value +" as "+ form.wea2.value +" for "+form.wea3.value+" Years.</li></ul></div><div style='background-color:#f3f2ee'>Declaration :</div><p>I hereby declare that the information furnished above is true to the best of my knowledge.</p><br>Date :"+dd+"/"+mm+"/"+yyyy);
+    window.print();
+
+
+// $data .= date('d/m/y');<br><br>Place :<br><br><div style='text-align:right'>$data .= $_POST['fn']; $data .= $_POST['mn']; $data .= $_POST['ln'];</div><br><br></div></div></div>date_default_timezone_set('Asia/Kolkata'); $date = date('m.d.Y.G.i'); $mpdf=new \Mpdf\Mpdf(['mode' => 'utf-8','format' => 'A4','margin_left' => 10,'margin_right' => 10,'margin_top' => 6,'margin_bottom' => 6,'margin_header' => 0,'margin_footer' => 0]);$mpdf-> WriteHTML($data);");
+    // document.write(form.fn.value);
+    }
+
+    </script>
+    
+    
     <!-- js files -->
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
